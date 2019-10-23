@@ -1,0 +1,37 @@
+      ghhggg, [23 May 2019 at 17:41:22]:
+      [global]
+              workgroup = WORKGROUP
+              server string = Samba Server Version %v
+              security = user
+              map to guest = Bad User
+
+              load printers = yes
+              cups options = raw全局
+
+      samba 全局配置
+
+      [share]
+              comment=share
+              path=/data/wwwroot
+              public = yes
+              browseable = yes
+              public = yes
+              read only = no
+              writable = yes
+      #       valid users = user
+              create mask = 0777
+              directory mask = 0777
+             force user = root
+      #       force group =nogroup
+              available = yes
+              security = share
+
+      samba 共享文件配置
+
+      再Linux指定目录下赋予权限  chmod  777 -R  ./*
+
+      修改配置记得重启
+
+      以上就是samba 共享文件到win系统
+
+      \\192.168.209.135\share  直接进入
