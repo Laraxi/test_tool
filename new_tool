@@ -1,4 +1,4 @@
-      ghhggg, [23 May 2019 at 17:41:22]:
+      samba 全局配置
       [global]
               workgroup = WORKGROUP
               server string = Samba Server Version %v
@@ -8,7 +8,7 @@
               load printers = yes
               cups options = raw全局
 
-      samba 全局配置
+
 
       [share]
               comment=share
