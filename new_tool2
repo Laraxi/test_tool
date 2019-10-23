@@ -1,0 +1,23 @@
+    静态ip设置
+    search 08-00-27-22-4a-d3
+    nameserver 8.8.8.8
+    nameserver 8.8.4.4
+    ~
+
+    IPADDR=192.168.254.119
+    GATEWAY=192.168.254.254
+    NETMASK=255.255.255.0
+    DNS1=8.8.8.8
+    DNS2=8.8.4.4
+
+    BOOTPROTO="static"
+
+    vim /etc/sysconfig/network-scripts/ifcfg-enp0s3
+
+    service network restart
+
+    [root@localhost ~]# ping baidu.com
+    PING baidu.com (220.181.38.148) 56(84) bytes of data.
+    64 bytes from 220.181.38.148 (220.181.38.148): icmp_seq=1 ttl=39 time=404 ms
+    64 bytes from 220.181.38.148 (220.181.38.148): icmp_seq=2 ttl=39 time=382 ms
+    64 bytes from 220.181.38.148 (220.181.38.148): icmp_seq=3 ttl=39 time=314 ms
