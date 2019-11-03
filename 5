@@ -1,0 +1,53 @@
+ $title = $_POST['title'];
+    $html1 = str_replace_once('[[[a_title]]]','[[[a_title1]]]',$title);
+    $html2 = str_replace_once('[[[a_title]]]','[[[a_title2]]]',$html1);
+    $html3 = str_replace_once('[[[a_title]]]','[[[a_title3]]]',$html2);
+    $html4 = str_replace_once('[[[a_title]]]','[[[a_title4]]]',$html3);
+    $html5 = str_replace_once('[[[a_title]]]','[[[a_title5]]]',$html4);
+    $html6 = str_replace_once('[[[a_title]]]','[[[a_title6]]]',$html5);
+    $html7 = str_replace_once('[[[a_title]]]','[[[a_title7]]]',$html6);
+    $html8 = str_replace_once('[[[a_title]]]','[[[a_title8]]]',$html7);
+    $html9 = str_replace_once('[[[a_title]]]','[[[a_title9]]]',$html8);
+    $html10 = str_replace_once('[[[a_title]]]','[[[a_title10]]]',$html9);
+
+
+    $html11 = str_replace_once('[[[a_url]]]','[[[a_url1]]]',$html10);
+    $html12 = str_replace_once('[[[a_url]]]','[[[a_url2]]]',$html11);
+    $html13 = str_replace_once('[[[a_url]]]','[[[a_url3]]]',$html12);
+    $html14 = str_replace_once('[[[a_url]]]','[[[a_url4]]]',$html13);
+    $html15 = str_replace_once('[[[a_url]]]','[[[a_url5]]]',$html14);
+    $html16 = str_replace_once('[[[a_url]]]','[[[a_url6]]]',$html15);
+    $html17 = str_replace_once('[[[a_url]]]','[[[a_url7]]]',$html16);
+    $html18 = str_replace_once('[[[a_url]]]','[[[a_url8]]]',$html17);
+    $html19 = str_replace_once('[[[a_url]]]','[[[a_url9]]]',$html18);
+    $html20 = str_replace_once('[[[a_url]]]','[[[a_url10]]]',$html19);
+
+
+    $data['A3'] = $html20;
+
+    $content = $_POST['content'];
+
+    $html21 = str_replace_once('[[[a_title]]]','[[[a_title11]]]',$content);
+    $html22 = str_replace_once('[[[a_title]]]','[[[a_title12]]]',$html21);
+    $html23 = str_replace_once('[[[a_title]]]','[[[a_title13]]]',$html22);
+    $html24 = str_replace_once('[[[a_title]]]','[[[a_title14]]]',$html23);
+    $html25 = str_replace_once('[[[a_title]]]','[[[a_title15]]]',$html24);
+    $html26 = str_replace_once('[[[a_title]]]','[[[a_title16]]]',$html25);
+    $html27 = str_replace_once('[[[a_title]]]','[[[a_title17]]]',$html26);
+    $html28 = str_replace_once('[[[a_title]]]','[[[a_title18]]]',$html27);
+    $html29 = str_replace_once('[[[a_title]]]','[[[a_title19]]]',$html28);
+    $html30 = str_replace_once('[[[a_title]]]','[[[a_title20]]]',$html29);
+
+
+    $html31 = str_replace_once('[[[a_url]]]','[[[a_url11]]]',$html30);
+    $html32 = str_replace_once('[[[a_url]]]','[[[a_url12]]]',$html31);
+    $html33 = str_replace_once('[[[a_url]]]','[[[a_url13]]]',$html32);
+    $html34 = str_replace_once('[[[a_url]]]','[[[a_url14]]]',$html33);
+    $html35 = str_replace_once('[[[a_url]]]','[[[a_url15]]]',$html34);
+    $html36 = str_replace_once('[[[a_url]]]','[[[a_url16]]]',$html35);
+    $html37 = str_replace_once('[[[a_url]]]','[[[a_url17]]]',$html36);
+    $html38 = str_replace_once('[[[a_url]]]','[[[a_url18]]]',$html37);
+    $html39 = str_replace_once('[[[a_url]]]','[[[a_url19]]]',$html38);
+    $html40 = str_replace_once('[[[a_url]]]','[[[a_url20]]]',$html39);
+    $data['A4'] = $html40;
+    print_r($data);exit;
