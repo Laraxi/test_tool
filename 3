@@ -1,4 +1,36 @@
-    //$html10 = "<div class=''>
+   $pattern = '/\||,|\s/';
+$subject = 'php|html,js linux';
+$replace = '-';
+$str = preg_replace($pattern,$replace,$subject);
+   
+   
+   
+   
+   
+   //$pattern = '/(.*)(\d{4})-(\d{2}-\d{2})/';
+//$subject = '今年是2019-11-03';
+//
+//
+//$str = preg_replace_callback($pattern,'nextyear',$subject);
+//
+//
+//function nextyear($vars){
+////    echo '<pre>';
+//   //print_r($vars);
+//    $str = '';
+//    for ($i = 1; $i <3; $i++){
+//        $str .=  $vars[1] .($vars[2] + $i) .'-' . $vars[3] .'<hr />';
+//    }
+//
+//    return $str;
+//
+//}
+   
+   
+   
+   
+   
+   //$html10 = "<div class=''>
 //    <h3>我的时间[[[a_time]]]</h3>
 //    <ul>
 //        <li><a href='[[[a_url]]]'>[[[a_title]]]</a></li>
