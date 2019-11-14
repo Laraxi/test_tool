@@ -1,0 +1,45 @@
+    //取访问ip
+    function get_ip()
+    {
+        if (getenv("HTTP_CLIENT_IP") && strcasecmp(getenv("HTTP_CLIENT_IP"), "unknown")) {
+            $ip = getenv("HTTP_CLIENT_IP");
+        } else if (getenv("HTTP_X_FORWARDED_FOR") && strcasecmp(getenv("HTTP_X_FORWARDED_FOR"), "unknown")) {
+            $ip = getenv("HTTP_X_FORWARDED_FOR");
+        } else if (getenv("REMOTE_ADDR") && strcasecmp(getenv("REMOTE_ADDR"), "unknown")) {
+            $ip = getenv("REMOTE_ADDR");
+        } else if (isset($_SERVER['REMOTE_ADDR']) && $_SERVER['REMOTE_ADDR'] && strcasecmp($_SERVER['REMOTE_ADDR'], "unknown")) {
+            $ip = $_SERVER['REMOTE_ADDR'];
+        } else {
+            $ip = "unknown";
+        }
+        $login_ip = explode(',', $ip)[0];
+        return ($login_ip);
+    }
+
+
+
+      /**
+         * 白名单列表
+         *
+         * @return void
+         */
+        public function confWhiteList()
+        {
+
+              if(\think\facade\Request::isPost()){
+                   $content = input('content','');
+                   $ipList = explode(PHP_EOL,$content);
+                   $ipWhiteList['list'] = $ipList;
+                   $enable = input('tcheck') == 'on' ? 0 : 1;
+                   $ipWhiteList['enabled'] = $enable;
+                   $ret = SysConfigLogic::saveConfig('ip_white_list',$ipWhiteList,'修改白名单设置');
+                   $this->system->alertWin('修改成功', '/pyqct/Rbac/confWhiteList');
+                   exit();
+              }
+            $ipWhiteList = SysConfigLogic::getConfig('ip_white_list');
+            $list =  implode(PHP_EOL,$ipWhiteList['list']);
+            $this->assign('list',$list);
+            $this->assign('enabled',$ipWhiteList['enabled']);
+            $this->assign('ip',get_ip());
+            return $this->fetch();
+      }
